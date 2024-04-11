@@ -1,34 +1,31 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Scattolini":
+  - firstname: ["Riccardo", "R.", "R"]
+    url: https://scholar.google.com/citations?user=A6dLqPAAAAAJ
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Farina":
+  - firstname: ["Marcello", "M.", "M"]
+    url: https://scholar.google.com/citations?hl=it&user=ktFi8-0AAAAJ
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"La Bella": 
+  - firstname: ["Alessio", "A.", "A"]
+    url: https://scholar.google.com/citations?user=ZBP7BF8AAAAJ
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Bonassi":
+  - firstname: ["Fabio", "F.", "F"]
+    url: https://scholar.google.com/citations?user=UWCWyAcAAAAJ
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Fagiano": 
+  - firstname: ["Lorenzo", "L.", "L", "Lorenzo Mario", "Lorenzo M.", "Lorenzo M", "L. M.", "LM", "L M"]
+    url: https://scholar.google.com/citations?user=wcXdcwEAAAAJ
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Schön":
+  - firstname: ["Thomas", "Thomas B.", "Thomas Bo", "Thomas B", "T. B."]
+    url: https://scholar.google.com/citations?user=FUqUC2oAAAAJ
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Mattsson":
+  - firstname: ["Per", "P.", "P"]
+    url: https://scholar.google.com/citations?user=w2znCLkAAAAJ
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
-
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Breschi":
+  - firstname: ["Valentina", "V.", "V"]
+    url: https://scholar.google.com/citations?user=vq3HiE4AAAAJ
