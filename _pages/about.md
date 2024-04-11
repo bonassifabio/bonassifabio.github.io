@@ -33,7 +33,7 @@ latest_posts:
 I'm a post-doctoral reasearcher at the Uppsala University, Sweden.
 My research interests lie at the intersection of Deep Learning, dynamical system modeling and optimization-based control.
 
-With my research activities, I try to bridge the gaps between the deep learning community and the System & Controls community, showing that the use of Recurrent Neural Networks (RNNs) for system indentification and model predictive control design can combine performances and safety.
+With my research activities, I try to bridge the gaps between the deep learning community and the System & Controls community, showing that the use of Recurrent Neural Networks (RNNs) for system indentification and MPC design can combine performances and safety.
 
 I am also interested in the application of deep learning and optimization-based control approaches to the Power System. 
 
