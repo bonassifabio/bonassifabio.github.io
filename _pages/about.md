@@ -2,24 +2,51 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Post-doctoral researcher at Uppsala University
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: prof_pic3.jpg
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Systems and Control Division</p>
+    <p>Dep. of Information Technology</p>
+    <p>Uppsala University</p>
+    <p>Sweden</p>
 
-news: true # includes a list of news items
+news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+---
+<br/>
+I'm a post-doctoral reasearcher at the Uppsala University, Sweden.
+My research interests lie at the intersection of Deep Learning, dynamical system modeling and optimization-based control.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+With my research activities, I try to bridge the gaps between the deep learning community and the System & Controls community, showing that the use of Recurrent Neural Networks (RNNs) for system indentification and model predictive control design can combine performances and safety.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am also interested in the application of deep learning and optimization-based control approaches to the Power System. 
+
+
+<br/>
+#### Reconciling Deep Learning and Control Theory
+As a PhD student at Politecnico di Milano, Italy, I have been investigating the use of Recurrent Neural Networks for **data-driven control** of unknown dynamical systems.
+We investigated:
+
+- The Input-to-State Stability (ISS) and Incrementally Input-to-State Stabile (𝛿ISS) of RNNs.
+- Training strategy for learning RNNs with stability and robustness certifications.
+- RNN-based Model Predictive Control (MPC) and Internal Model Control (IMC) schemes. 
+
+This ideas have been described in my [PhD dissertation](https://bonassifabio.github.io/phd-thesis/), defended on February 2023.
+
+<br/>
+#### Optimization-based control for the smart grid
+I am also interested in the **application of optimization-based control algorithms** in the context of the **smart grid**. 
+During my research activities, I have worked on the following topics:
+
+- Design of MPC architectures for the optimal energy management and coordination of microgrids & prosumers.
+- Analysis of the European regulatory framework for the participation of prosumer aggregators in the electricity markets.
+- Design of optimization-based energy management architectures for aggregators of microgrids & prosumers.
+
+<br/>

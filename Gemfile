@@ -28,4 +28,5 @@ group :other_plugins do
     gem 'httparty'
     gem 'observer' # used by jekyll-scholar
     gem 'ostruct' # used by jekyll-twitter-plugin
+    gem 'jekyll-redirect-from'
 end
