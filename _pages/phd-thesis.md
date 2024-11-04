@@ -42,6 +42,19 @@ We therefore seek to provide a first systematic approach towards the safe use of
 The doctoral thesis is freely available [at the following link](https://www.politesi.polimi.it/handle/10589/196384).
 
 ## Code
-*Code documentation and additional material are landing soon on this page (ETA: Jan. 2024)*
-
 <div class="repo-card" data-repo="bonassifabio/ssnet"></div>
+
+<br/>
+
+## Errata
+*Below are some errors and their corrections.*
+
+#### Erratum 1
+`Discovered: 2024-11-04 (thanks Eva Masero)` 
+
+* The Lyapunov equation (A.215) should read $$\mathfrak{A}_d^{\prime} P \mathfrak{A}_d - P = -I_{2,2}$$
+
+* Part of the left member of equation (A.218) is missing. Equation (A.218) should read
+$$V_d(\chi_{k+1}, \hat{\chi}_{k+1}) - V_d(\chi_k, \hat{\chi}_k) \leq - \left\| \begin{bmatrix}
+    \| x_k - \hat{x}_k \|_\infty \\ \| \xi_k - \hat{\xi}_k \|_\infty 
+\end{bmatrix} \right\|_{I_{2,2}}^2 \leq - \frac{1}{n_x + n_y} \| \chi_k - \hat{\chi}_k \|_2^2$$

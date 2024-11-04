@@ -4,6 +4,21 @@
 @string{IFAC = {IFAC,}}
 @string{IEEE = {IEEE,}}
 
+@article{xie2022robust,
+  abbr={TASE},
+  title={Learning Control Affine Neural NARX Models for Internal Model Control Design},
+  author={Xie, Jing and Bonassi, Fabio and Scattolini, Riccardo},
+  journal={IEEE Transactions on Automation Science and Engineering},
+  arxiv={2402.05607},
+  doi = {10.1109/TASE.2024.3479321},
+  html = {https://doi.org/10.1109/TASE.2024.3479321},
+  abstract = {This paper explores the use of Control Affine Neural Nonlinear AutoRegressive eXogenous (CA-NNARX) models for nonlinear system identification and model-based control design. The idea behind this architecture is to match the known control-affine structure of the system to achieve improved performance. Coherently with recent literature of neural networks for data-driven control, we first analyze the stability properties of CA-NNARX models, devising sufficient conditions for their incremental Input-to-State Stability ({\delta}ISS) that can be enforced at the model training stage. The model’s stability property is then leveraged to design a stable Internal Model Control (IMC) architecture. The proposed control scheme is tested on a real Quadruple Tank benchmark system to address the output reference tracking problem. The results achieved show that (i) the modeling accuracy of CA-NNARX is superior to the one of a standard NNARX model for given weight size and training epochs, (ii) the proposed IMC law provides performance comparable to the ones of a standard Model Predictive Controller (MPC) at a significantly lower computational burden, and (iii) the $\delta$ ISS of the model is beneficial to the closed-loop performance. Note to Practitioners —Many engineering systems, such as robotic manipulators and chemical reactors, are described by Control Affine (CA) models, characterized by onlinear dynamics where the control variable enters in a linear way. If only this structural information is available without any additional knowledge, for instance on the order of the system or on the value of its parameters, a black-box identification approach can be followed to estimate the model from data. For these reasons, in this paper we propose a modeling and control design method suited for this class of systems. Specifically, we assume that the system is described by a CA-Neural Nonlinear AutoRegressive eXogenous (CA-NNARX) model. Then, the estimated model is used to design a stable Internal Model Control (IMC) scheme for the solution of output reference tracking problems. The stability, performance, and robustness properties of the proposed approach are studied and tested in the control of a laboratory system. In addition, a simulation analysis shows how IMC represents a valid alternative to the popular Model Predictive Control (MPC) approach, in particular for embedded systems, where the computation power required by MPC can be too high.},
+  year = {2024},
+  bibtex_show = {true},
+  selected = {false}
+}
+
+
 @article{van2024accounts,
   title={Accounts of using the Tustin-Net architecture on a rotary inverted pendulum},
   author={van Esch, Stijn and Bonassi, Fabio and Sch{\"o}n, Thomas B},
