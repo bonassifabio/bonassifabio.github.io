@@ -58,3 +58,9 @@ The doctoral thesis is freely available [at the following link](https://www.poli
 $$V_d(\chi_{k+1}, \hat{\chi}_{k+1}) - V_d(\chi_k, \hat{\chi}_k) \leq - \left\| \begin{bmatrix}
     \| x_k - \hat{x}_k \|_\infty \\ \| \xi_k - \hat{\xi}_k \|_\infty 
 \end{bmatrix} \right\|_{I_{2,2}}^2 \leq - \frac{1}{n_x + n_y} \| \chi_k - \hat{\chi}_k \|_2^2$$
+
+
+#### Erratum 2
+`Discovered: 2024-11-04 (thanks Eva Masero)` 
+
+Equation (4.13e) contains a typo. The third element should be $$-10^{-y}$$, with a minus sign.
