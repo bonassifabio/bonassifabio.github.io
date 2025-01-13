@@ -145,22 +145,7 @@ ninja.data = [{
           section: "News",},{id: "news-on-december-5-i-will-give-a-seminar-at-kth-division-of-decision-and-control-systems-entitled-learning-stable-recurrent-neural-networks-for-model-predictive-control-some-resources-on-this-talk-can-be-found-at-this-link",
           title: 'On December 5 I will give a seminar at KTH, Division of Decision...',
           description: "",
-          section: "News",},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
-            },},{
+          section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
