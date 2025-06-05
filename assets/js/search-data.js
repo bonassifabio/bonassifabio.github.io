@@ -152,7 +152,7 @@ ninja.data = [{
           section: "News",},{id: "news-on-december-5-i-will-give-a-seminar-at-kth-division-of-decision-and-control-systems-entitled-learning-stable-recurrent-neural-networks-for-model-predictive-control-some-resources-on-this-talk-can-be-found-at-this-link",
           title: 'On December 5 I will give a seminar at KTH, Division of Decision...',
           description: "",
-          section: "News",},{id: "news-our-extended-abstract-from-system-identification-to-sequence-models-a-primer-on-structured-state-space-models-will-be-presented-at-reglermöte-2025-june-11-to-13-lund-sweden",
+          section: "News",},{id: "news-our-extended-abstract-from-system-identification-to-sequence-models-a-primer-on-structured-state-space-models-will-be-presented-at-reglermöte-2025-june-12-lund-sweden-see-this-page-for-more-details",
           title: 'Our Extended Abstract From System Identification to sequence models: a primer on Structured...',
           description: "",
           section: "News",},{
