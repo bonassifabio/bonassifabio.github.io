@@ -31,6 +31,7 @@ References
 * A. Orvieto et al. (2023) "Resurrecting recurrent neural networks for long sequences." International Conference on Machine Learning. PMLR. [[link]](http://proceedings.mlr.press/v202/orvieto23a.html)
 * Lennart Ljung (1999). "System identification: theory for the user". [[info]](https://ieeexplore.ieee.org/document/6213241)
 * A. Gu and T. Dao. (2024). Mamba: Linear-Time Sequence Modeling with Selective State Spaces. 1st Conference on Language Modeling. [[link]](https://openreview.net/forum?id=tEYskw1VY2#discussion)
+* Alonso et al (2024). "State space models as foundation models: A control theoretic overview." arXiv preprint. [[link]](https://arxiv.org/abs/2403.16899)
 
 
 <!-- {% cite bonassi2024structured %} -->
