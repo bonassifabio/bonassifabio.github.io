@@ -28,7 +28,7 @@ ninja.data = [{
               description: "",
               section: "Dropdown",
               handler: () => {
-                window.location.href = "";
+                window.location.href = "/1RT485/";
               },
             },{id: "nav-repositories",
           title: "repositories",
@@ -37,62 +37,73 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "post-a-post-with-image-galleries",
-      
-        title: "a post with image galleries",
-      
-      description: "this is what included image galleries could look like",
-      section: "Posts",
-      handler: () => {
+        },{id: "post-a-post-with-plotly-js",
         
-          window.location.href = "/blog/2024/photo-gallery/";
+          title: "a post with plotly.js",
         
-      },
-    },{id: "post-a-post-with-tabs",
-      
-        title: "a post with tabs",
-      
-      description: "this is what included tabs in a post could look like",
-      section: "Posts",
-      handler: () => {
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/plotly/";
+          
+        },
+      },{id: "post-a-post-with-image-galleries",
         
-          window.location.href = "/blog/2024/tabs/";
+          title: "a post with image galleries",
         
-      },
-    },{id: "post-a-post-with-typograms",
-      
-        title: "a post with typograms",
-      
-      description: "this is what included typograms code could look like",
-      section: "Posts",
-      handler: () => {
+        description: "this is what included image galleries could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/photo-gallery/";
+          
+        },
+      },{id: "post-a-post-with-tabs",
         
-          window.location.href = "/blog/2024/typograms/";
+          title: "a post with tabs",
         
-      },
-    },{id: "post-a-post-that-can-be-cited",
-      
-        title: "a post that can be cited",
-      
-      description: "this is what a post that can be cited looks like",
-      section: "Posts",
-      handler: () => {
+        description: "this is what included tabs in a post could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/tabs/";
+          
+        },
+      },{id: "post-a-post-with-typograms",
         
-          window.location.href = "/blog/2024/post-citation/";
+          title: "a post with typograms",
         
-      },
-    },{id: "post-a-post-with-pseudo-code",
-      
-        title: "a post with pseudo code",
-      
-      description: "this is what included pseudo code could look like",
-      section: "Posts",
-      handler: () => {
+        description: "this is what included typograms code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/typograms/";
+          
+        },
+      },{id: "post-a-post-that-can-be-cited",
         
-          window.location.href = "/blog/2024/pseudocode/";
+          title: "a post that can be cited",
         
-      },
-    },{id: "news-i-have-been-awarded-with-the-ifac-young-author-award-for-the-paper-stability-of-discrete-time-feed-forward-neural-networks-in-narx-configuration-presented-at-sysid-2021",
+        description: "this is what a post that can be cited looks like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/post-citation/";
+          
+        },
+      },{id: "post-a-post-with-pseudo-code",
+        
+          title: "a post with pseudo code",
+        
+        description: "this is what included pseudo code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/pseudocode/";
+          
+        },
+      },{id: "news-i-have-been-awarded-with-the-ifac-young-author-award-for-the-paper-stability-of-discrete-time-feed-forward-neural-networks-in-narx-configuration-presented-at-sysid-2021",
           title: 'I have been awarded with the IFAC Young Author Award for the paper...',
           description: "",
           section: "News",},{id: "news-i-started-my-abroad-research-stay-at-uppsala-university-sweden-joining-the-research-group-of-prof-thomas-schön",
