@@ -166,6 +166,9 @@ ninja.data = [{
           section: "News",},{id: "news-our-extended-abstract-from-system-identification-to-sequence-models-a-primer-on-structured-state-space-models-will-be-presented-at-reglermöte-2025-june-12-lund-sweden-see-this-page-for-more-details",
           title: 'Our Extended Abstract From System Identification to sequence models: a primer on Structured...',
           description: "",
+          section: "News",},{id: "news-yay-i-won-the-ai-assisted-workflow-coding-hackathon-toghether-with-my-teammates-robin-hollifeldt-alireza-haddadi-and-ali-semi-yenimol",
+          title: 'Yay! I won the AI-assisted workflow coding hackathon, toghether with my teammates Robin...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
