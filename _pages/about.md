@@ -10,9 +10,7 @@ profile:
   image_circular: false
   more_info: >
     <p>Systems and Control Division</p>
-    <p>Dep. of Information Technology</p>
     <p>Uppsala University</p>
-    <p>Sweden</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -30,37 +28,25 @@ latest_posts:
 
 ---
 <br/>
-I’m a post-doctoral researcher at Uppsala University, Sweden, exploring topics at the intersection of deep learning, system identification, and (optimization-based) control.
-
-My work aims to **bridge the gaps between the deep learning and control systems communities**. 
-I focus on demonstrating how models like Recurrent Neural Networks (RNNs) can be used for system identification and Model Predictive Control (MPC) to achieve both high performance and safety.
-
+Hi there!
 
 <br/>
-#### Reconciling Deep Learning and Control Theory
-During my PhD at Politecnico di Milano, I investigated the use of **RNNs for data-driven control** of unknown dynamical systems. My research addressed:
-
--	Input-to-State Stability (ISS) and Incremental ISS (𝛿ISS) properties of RNNs.
-- Training strategies that ensure **robustness and stability**.
--	Development of RNN-based MPC and Internal Model Control (IMC) schemes with theoretical guarantees.
-
-This ideas have been described in my [PhD dissertation](https://bonassifabio.github.io/phd-thesis/), defended on February 2023.
-
+I'm a postdoctoral researcher at Uppsala University, Sweden, working at the intersection of deep learning, system identification, and control.
 
 <br/>
-#### System identification meets machine learning
-
-In my postdoctoral work, I have been exploring **Structured State-Space Models (SSMs)** like Mamba. My focus is on:
--	Integrating principles of system identification into SSM architectures.
--	Improving thir performance by investigating innovative parameterizations, structures, and initializations.
-- Applying those models on system identification and sequence classification tasks.
-
+My focus? Applying machine learning to time-series classification and forecasting—currently with a special emphasis on electrocardiograms.
+The overarching goal is to make deep learning models more **reliable, robust, and safe** 🚀.
 
 <br/>
-#### Optimization-based control for the smart grid
-I am also interested in the application of **optimization-based control algorithms** to the **smart grid**, focusing on:
-- Developing MPC frameworks for optimal energy management in microgrids.
--	Exploring European regulations for prosumer aggregators in electricity markets.
--	Designing energy management architectures for distributed resources.
+#### PhD Research
+During my PhD at Politecnico di Milano, I developed training strategies to make recurrent neural networks robust and safe for data-driven control, including their application to Model Predictive Control algorithms. 
+
+These ideas are detailed in my [PhD dissertation](https://bonassifabio.github.io/phd-thesis/), defended in February 2023, which received the Dimitris N. Chorafas Prize.
+
+<br/>
+#### System Identification Meets Machine Learning
+In my postdoc, I'm exploring **Structured State-Space Models (SSMs)** like Mamba. 
+The goal is to integrate system identification principles to make these architectures more parsimonious, data-efficient, and faster to train. 
+Together with [Thomas](https://www.uu.se/kontakt-och-organisation/personal?query=N13-1742) and [Antonio](https://www.uu.se/kontakt-och-organisation/personal?query=N18-2038), I'm also investigating SSMs for ECG classification.
 
 <br/>
