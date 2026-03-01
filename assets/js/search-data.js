@@ -169,7 +169,12 @@ ninja.data = [{
           section: "News",},{id: "news-yay-i-won-the-ai-assisted-workflow-coding-hackathon-toghether-with-my-teammates-robin-hollifeldt-alireza-haddadi-and-ali-semi-yenimol",
           title: 'Yay! I won the AI-assisted workflow coding hackathon, toghether with my teammates Robin...',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "projects-project-10",
+          title: 'project 10',
+          description: "A project with an introduction section",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_project/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
