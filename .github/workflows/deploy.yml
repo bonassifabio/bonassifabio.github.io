@@ -99,11 +99,10 @@ jobs:
           purgecss -c purgecss.config.js
       - name: Trigger Trophy Update 🏆
         if: github.event_name != 'pull_request'
-        uses: peter-evans/workflow-dispatch@v3
+        uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: trophy.yml
           ref: stats
-          wait-for-completion: true
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
