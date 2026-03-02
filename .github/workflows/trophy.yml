@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - stats
+      - master
   schedule:
     - cron: '0 0 */7 * *'
   workflow_dispatch:
@@ -11,16 +12,27 @@ on:
 jobs:
   generate-trophy:
     runs-on: ubuntu-latest
+    if: >-
+      github.event_name != 'push' ||
+      github.ref == 'refs/heads/stats' ||
+      (github.ref == 'refs/heads/master' && contains(toJSON(github.event.commits.*.modified), '_data/repositories.yml'))
     steps:
       - name: Checkout stats branch
         uses: actions/checkout@v4
         with:
           ref: stats
+          fetch-depth: 0
+
+      - name: Extract GitHub username
+        id: config
+        run: |
+          USERNAME=$(git show origin/master:_data/repositories.yml | python3 -c "import yaml, sys; data=yaml.safe_load(sys.stdin); print(data['github_users'][0])")
+          echo "username=$USERNAME" >> $GITHUB_OUTPUT
 
       - name: Generate trophy
         uses: Erik-Donath/github-profile-trophy@feature/generate-svg
         with:
-          username: bonassifabio
+          username: ${{ steps.config.outputs.username }}
           output_path: trophy.svg
           token: ${{ secrets.GTHB_TOKEN }}
 
