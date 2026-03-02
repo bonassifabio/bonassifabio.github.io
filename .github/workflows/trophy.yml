@@ -1,0 +1,6 @@
+- name: Generate trophy
+  uses: Erik-Donath/github-profile-trophy@feature/generate-svg
+  with:
+    username: bonassifabio
+    output_path: trophy.svg
+    token: ${{ secrets.GTHB_TOKEN }}
