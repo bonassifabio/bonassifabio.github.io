@@ -1,4 +1,4 @@
-name: Generate Trophy
+name: Generate Trophy and Repo Cards
 
 on:
   push:
@@ -10,12 +10,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  generate-trophy:
+  setup:
     runs-on: ubuntu-latest
     if: >-
       github.event_name != 'push' ||
       github.ref == 'refs/heads/stats' ||
       (github.ref == 'refs/heads/master' && contains(toJSON(github.event.commits.*.modified), '_data/repositories.yml'))
+    outputs:
+      username: ${{ steps.config.outputs.username }}
+      max_lines: ${{ steps.config.outputs.max_lines }}
+      matrix: ${{ steps.config.outputs.matrix }}
     steps:
       - name: Checkout stats branch
         uses: actions/checkout@v4
@@ -23,23 +27,109 @@ jobs:
           ref: stats
           fetch-depth: 0
 
-      - name: Extract GitHub username
+      - name: Extract config
         id: config
         run: |
-          USERNAME=$(git show origin/master:_data/repositories.yml | python3 -c "import yaml, sys; data=yaml.safe_load(sys.stdin); print(data['github_users'][0])")
+          DATA=$(git show origin/master:_data/repositories.yml)
+          USERNAME=$(echo "$DATA" | python3 -c "import yaml, sys; d=yaml.safe_load(sys.stdin); print(d['github_users'][0])")
+          MAX_LINES=$(echo "$DATA" | python3 -c "import yaml, sys; d=yaml.safe_load(sys.stdin); print(d.get('repo_description_lines_max', 2))")
+          MATRIX=$(echo "$DATA" | python3 -c "
+          import yaml, sys, json
+          d = yaml.safe_load(sys.stdin)
+          repos = d.get('github_repos', [])
+          github_users = d.get('github_users', [])
+          items = []
+          for repo in repos:
+              owner, name = repo.split('/')
+              show_owner = 'false' if owner in github_users else 'true'
+              for theme, suffix in [('default', 'light'), ('dark', 'dark')]:
+                  items.append({'owner': owner, 'name': name, 'theme': theme, 'suffix': suffix, 'show_owner': show_owner, 'path': 'repo-cards/' + owner + '-' + name + '-' + suffix + '.svg', 'artifact': 'card-' + owner + '-' + name + '-' + suffix})
+          print(json.dumps({'include': items}))
+          ")
           echo "username=$USERNAME" >> $GITHUB_OUTPUT
+          echo "max_lines=$MAX_LINES" >> $GITHUB_OUTPUT
+          echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
 
-      - name: Generate trophy
+  trophy:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - theme: flat
+            suffix: light
+          - theme: gitdimmed
+            suffix: dark
+    steps:
+      - name: Generate trophy (${{ matrix.suffix }} theme)
         uses: Erik-Donath/github-profile-trophy@feature/generate-svg
         with:
-          username: ${{ steps.config.outputs.username }}
-          output_path: trophy.svg
+          username: ${{ needs.setup.outputs.username }}
+          file: trophy-${{ matrix.suffix }}.svg
+          theme: ${{ matrix.theme }}
+          max-cols: 6
+          margin-width: 15
+          margin-height: 15
+          no-background: true
           token: ${{ secrets.GTHB_TOKEN }}
 
-      - name: Commit and push trophy
+      - name: Upload trophy artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: trophy-${{ matrix.suffix }}
+          path: trophy-${{ matrix.suffix }}.svg
+
+  repo-cards:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
+    steps:
+      - name: Generate repo card (${{ matrix.owner }}/${{ matrix.name }}, ${{ matrix.suffix }})
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: >-
+            username=${{ matrix.owner }}&repo=${{ matrix.name }}&theme=${{ matrix.theme }}&description_lines_count=${{ needs.setup.outputs.max_lines }}&show_owner=${{ matrix.show_owner }}
+          path: ${{ matrix.path }}
+          token: ${{ secrets.GTHB_TOKEN }}
+
+      - name: Upload repo card artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: ${{ matrix.path }}
+
+  commit:
+    needs: [trophy, repo-cards]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout stats branch
+        uses: actions/checkout@v4
+        with:
+          ref: stats
+          fetch-depth: 0
+
+      - name: Download trophy artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: trophy-*
+          path: .
+          merge-multiple: true
+
+      - name: Download repo card artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: card-*
+          path: .
+          merge-multiple: true
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add trophy.svg
-          git diff --cached --quiet || git commit -m "chore: update trophy"
+          git add trophy-light.svg trophy-dark.svg repo-cards/
+          git diff --cached --quiet || git commit -m "chore: update trophy and repo cards"
           git push
