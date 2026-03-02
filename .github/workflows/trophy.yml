@@ -130,6 +130,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p repo-cards
           git add trophy-light.svg trophy-dark.svg repo-cards/
           git diff --cached --quiet || git commit -m "chore: update trophy and repo cards"
           git push
