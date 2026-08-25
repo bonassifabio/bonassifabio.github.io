@@ -2,15 +2,13 @@
 layout: about
 title: about
 permalink: /
-subtitle: Post-doctoral researcher at Uppsala University
+subtitle: Optimization Engineer @ Flower
 
 profile:
   align: right
   image: prof_pic3.jpg
   image_circular: false
-  more_info: >
-    <p>Systems and Control Division</p>
-    <p>Uppsala University</p>
+  more_info: 
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -31,11 +29,14 @@ latest_posts:
 Hi there!
 
 <br/>
-I'm a postdoctoral researcher at Uppsala University, Sweden, working at the intersection of deep learning, system identification, and control.
+I'm an Optimization Engineer at [Flower](https://www.flower.se) ⚡️
 
 <br/>
-My focus? Applying machine learning to time-series classification and forecasting—currently with a special emphasis on electrocardiograms.
-The overarching goal is to make deep learning models more **reliable, robust, and safe** 🚀.
+Previously, I have been postdoctoral researcher at Uppsala University, Sweden, working at the intersection of deep learning, system identification, and control.
+
+<br/>
+My focus has been applying machine learning to time-series classification and forecasting—currently with a special emphasis on electrocardiograms.
+The overarching goal was to make deep learning models more **reliable, robust, and safe** 🚀.
 
 <br/>
 #### PhD Research
