@@ -36,3 +36,14 @@
 @use "tabs";
 @use "teachings";
 @use "typograms";
+
+/* ---------------------------------------------------------------------------
+   Local overrides
+   Kept here rather than shadowing whole gem partials, so al_folio_core stays
+   the source of truth for everything else.
+   --------------------------------------------------------------------------- */
+
+/* Contact icons: the theme ships 4rem; this site has always used 3rem. */
+.social .contact-icons {
+  font-size: 3rem;
+}
