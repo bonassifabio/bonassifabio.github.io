@@ -303,6 +303,7 @@ exclude:
   - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
+  - test/
   - readme_preview/
   - gems/
   - migrations/

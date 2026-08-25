@@ -14,6 +14,9 @@ on:
 jobs:
   # The job MUST be called `copilot-setup-steps` or it will not be picked up by Copilot.
   copilot-setup-steps:
+    # This site is generated from al-folio, it is not the al-folio starter.
+    # This job provisions a dev environment for al-folio contributors.
+    if: github.repository == 'alshedivat/al-folio'
     runs-on: ubuntu-latest
 
     # Set the permissions to the lowest permissions possible needed for your steps.

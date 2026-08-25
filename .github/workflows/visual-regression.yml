@@ -36,6 +36,10 @@ on:
 
 jobs:
   visual-regression:
+    # This site is generated from al-folio, it is not the al-folio starter.
+    # This job diffs against upstream's own v0.16.3 baseline, which says
+    # nothing about this site's intended appearance.
+    if: github.repository == 'alshedivat/al-folio'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
